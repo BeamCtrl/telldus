@@ -28,3 +28,23 @@ Have a look in the man page for a description how to use it:
 	man tdtool
 
 TellStick is a trademark of Telldus Technologies AB
+
+
+RPI build command/deps
+build-essential
+libusb-1.0-0-dev
+libftdi1-dev
+libconfuse-dev
+doxygen
+pkg-config
+build-essential
+autoconf
+automake
+libtool
+
+cmake .
+  -DCMAKE_POSITION_INDEPENDENT_CODE=ON 
+  -DFTDI_LIBRARY=/usr/lib/aarch64-linux-gnu/libftdi1.so
+  -DFTDI_INCLUDE_DIR=/usr/include
+  -DCMAKE_CXX_FLAGS="-std=c++11 -Wno-narrowing"
+
